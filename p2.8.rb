@@ -29,3 +29,14 @@ p sprintf("%#b", 10)
 puts str
 
 1&&2&&3
+
+def greeting(country)
+ country or return 'countryを入力してください'
+ if country =='japan'
+   'こんにちは'
+  else
+    'Hello'
+  end
+  greeting(nill)
+  greeting('japan')
+end
