@@ -69,3 +69,51 @@ numbers=[]
 print numbers
  p "次4.6"
  
+ a = []
+ while a.size <5
+  a<<1
+ end
+ p a
+ 
+ a = []
+a<<1 while a.size <5
+print a
+
+numbers =[1,2,3,4]
+sum=0
+for n in numbers
+ sum += n
+end
+print sum
+
+fruits = ['apple','melon','orange']
+ numbers = [1,2,3]
+ fruits.each do |fruit|
+  numbers.shuffle.each do |n|
+  puts "#{fruit},#{n}"
+  break if n == 3
+ end
+end
+
+fruits = ['apple','melon','orange']
+ numbers = [1,2,3]
+ catch :done do
+  fruits.shuffle.each do |n|
+   numbers.shuffle.each do |n|
+    puts "#{fruits}"
+     if fruits == 'orange' && n==3
+      throw :done
+     end
+   end
+  end
+end
+
+
+foods = ["ピーマン","トマト","セロリ"]
+foods.each do |food|
+ print "#{food}は好きですか"
+ answer = ["はい","いいえ"].sample
+ puts answer
+ redo unless answer == "はい"
+ 
+end
