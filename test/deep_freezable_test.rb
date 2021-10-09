@@ -17,7 +17,9 @@ class DeepFreezableTest < Minitest::Test
      { 'Japan' => 'yen', 'US' => 'dollar', 'India' => 'rupee' },
      Bank::CURRENCIES
    )
-   assert Bank::CURRENCIES.frozen?
-   assert Bank::CURRENCIES.all? { |key, value| key.frozen? && value.frozen? }
+# ハッシュ自身がfreezeされているか？
+    assert Bank::CURRENCIES.frozen?
+    # ハッシュの要素（キーと値）がすべてfreezeされているか？
+    assert Bank::CURRENCIES.all? { |key, value| key.frozen? && value.frozen? }
   end
 end
